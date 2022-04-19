@@ -10,11 +10,23 @@ const App = () => {
   const [apiError, setApiError] = useState('');
 
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
+    axios.get(`https://api.nasa.gov/planetary/apod?start_date=2022-04-18&api_key=${process.env.REACT_APP_API_KEY}`)
       .then(response => setPostData(response.data))
       .catch(error => setApiError(error.response));
   }, []);
   
+  const images = postData.map(post => {
+    return (
+      <Post
+        key={post.date}
+        id={post.date}
+        imgUrl={post.url}
+        title={post.title}
+        description={post.explanation}
+      />
+    );
+  });
+
   return (
     <div className="App">
       <header>
@@ -23,13 +35,7 @@ const App = () => {
       </header>
       <main>
         {apiError && <p>{apiError.status}: {apiError.data}</p>}
-        <Post
-          key={postData.date}
-          id={postData.date}
-          imgUrl={postData.url}
-          title={postData.title}
-          description={postData.explanation}
-        />
+        {images}
       </main>
     </div>
   );
