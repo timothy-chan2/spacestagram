@@ -19,10 +19,14 @@ const Post = () => {
   return (
     <article>
       {errorMessage && <p>{errorMessage.status}: {errorMessage.data}</p>}
-      <img src={postData.url} alt={postData.title} /> 
-      <h3>{postData.title} ** {postData.date}</h3>
-      <p>{postData.explanation}</p>
-      <button onClick={() => clicked()}>{buttonText}</button>
+      <img src={postData.url} aria-labelledby={postData.date} /> 
+      <h3>{postData.title}, {postData.date}</h3>
+      <p id={postData.date}>{postData.explanation}</p>
+      <button
+        data-message='Like or unlike the picture'
+        onClick={() => clicked()}>
+          {buttonText}
+      </button>
     </article>
   );
 }
