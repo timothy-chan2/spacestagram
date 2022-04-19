@@ -1,8 +1,20 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import './App.css';
 
 import Post from './Post';
 
-function App() {
+const App = () => {
+  const [postData, setPostData] = useState('');
+  const [apiError, setApiError] = useState('');
+
+  useEffect(() => {
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
+      .then(response => setPostData(response.data))
+      .catch(error => setApiError(error.response));
+  }, []);
+  
   return (
     <div className="App">
       <header>
@@ -10,7 +22,14 @@ function App() {
         <h2>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</h2>
       </header>
       <main>
-        <Post />
+        {apiError && <p>{apiError.status}: {apiError.data}</p>}
+        <Post
+          key={postData.date}
+          id={postData.date}
+          imgUrl={postData.url}
+          title={postData.title}
+          description={postData.explanation}
+        />
       </main>
     </div>
   );
