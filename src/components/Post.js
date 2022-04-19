@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Post = () => {
+  const [postData, setPostData] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const [buttonText, setButtonText] = useState('Like');
-  
-  const data = {
-    date: "2022-04-18",
-    explanation: "The mission was to document night-flying birds -- but it ended up also documenting a beautiful sky.",
-    hdurl: "https://apod.nasa.gov/apod/image/2204/MwMertola_Claro_2000.jpg",
-    title: 	"Stars and Planets over Portugal"
-  };
+
+  useEffect(() => {
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
+      .then(response => setPostData(response.data))
+      .catch(error => setErrorMessage(error.response));
+  }, []);
 
   const clicked = () => {
     buttonText === 'Like' ? setButtonText('Unlike') : setButtonText('Like');
@@ -16,9 +18,10 @@ const Post = () => {
   
   return (
     <article>
-      <img src={data.hdurl} alt={data.title} /> 
-      <h3>{data.title} ** {data.date}</h3>
-      <p>{data.explanation}</p>
+      {errorMessage && <p>{errorMessage.status}: {errorMessage.data}</p>}
+      <img src={postData.url} alt={postData.title} /> 
+      <h3>{postData.title} ** {postData.date}</h3>
+      <p>{postData.explanation}</p>
       <button onClick={() => clicked()}>{buttonText}</button>
     </article>
   );
