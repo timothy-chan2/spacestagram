@@ -19,3 +19,7 @@ button {
   padding: 0.5em 1.3em;
   cursor: pointer;
 }
+
+.loading-image {
+  animation: rotate 1s linear infinite;
+}

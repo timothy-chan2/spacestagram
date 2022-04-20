@@ -1,6 +1,7 @@
 import './App.css';
 
 import Post from './Post';
+import Loading from './Loading';
 import useAppData from '../hooks/useAppData';
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <h2>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</h2>
       </header>
       <main>
+        {posts.length === 0 && <Loading />}
         {apiError && <p>{apiError.status}: {apiError.data}</p>}
         {images}
       </main>
