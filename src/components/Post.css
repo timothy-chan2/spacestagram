@@ -3,6 +3,7 @@
   width: 90vw;
   margin: 0 auto 1em auto;
   border-radius: 8px;
+  box-shadow: 8px 8px 3px var(--shadow);
 }
 
 .post-img {
