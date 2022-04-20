@@ -11,3 +11,11 @@ h2 {
   color: var(--aqua);
   font-size: 1.3em;
 }
+
+button {
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 6px;
+  padding: 0.5em 1.3em;
+  cursor: pointer;
+}

@@ -1,7 +1,7 @@
 .post {
   background-color: var(--darker);
   width: 90vw;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 1em auto;
   border-radius: 8px;
 }
 
@@ -19,5 +19,13 @@
 }
 
 .post-like-btn {
+  color: var(--light-blue);
+  background-color: var(--darker);
+  border: 2px solid var(--light-blue);
   margin-bottom: 1.5em;
+}
+
+.post-like-btn:hover, .post-like-btn:focus {
+  color: var(--darker);
+  background-color: var(--light-blue);
 }
