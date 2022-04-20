@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const useAppData = () => {
   const [posts, setPosts] = useState([]);
-  const [apiError, setApiError] = useState('');
+  const [apiError, setApiError] = useState({});
 
   useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?start_date=2022-04-18&api_key=${process.env.REACT_APP_API_KEY}`)
