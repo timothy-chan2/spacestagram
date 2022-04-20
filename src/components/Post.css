@@ -1,3 +1,23 @@
+.post {
+  background-color: var(--darker);
+  width: 90vw;
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+}
+
+.post-img {
+  width: 90vw;
+  border-radius: 8px 8px 0 0;
+}
+
 .post-title {
   color: var(--yellow);
+}
+
+.post-desc {
+  padding: 0 1em;
+}
+
+.post-like-btn {
+  margin-bottom: 1.5em;
 }

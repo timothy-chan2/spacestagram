@@ -13,13 +13,14 @@ const Post = (props) => {
   }
   
   return (
-    <article>
-      <img src={props.imgUrl} aria-labelledby={props.id} /> 
+    <article className='post'>
+      <img src={props.imgUrl} aria-labelledby={props.id} className='post-img' /> 
       <h3 className='post-title'>{props.title} - {longDate}</h3>
-      <p id={props.id}>{props.description}</p>
+      <p id={props.id} className='post-desc'>{props.description}</p>
       <button
         data-message='Like or unlike the picture'
-        onClick={() => clicked()}>
+        onClick={() => clicked()}
+        className='post-like-btn'>
           {buttonText}
       </button>
     </article>
