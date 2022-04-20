@@ -15,7 +15,7 @@ const Post = (props) => {
   return (
     <article>
       <img src={props.imgUrl} aria-labelledby={props.id} /> 
-      <h3>{props.title} - {longDate}</h3>
+      <h3 className='post-title'>{props.title} - {longDate}</h3>
       <p id={props.id}>{props.description}</p>
       <button
         data-message='Like or unlike the picture'
