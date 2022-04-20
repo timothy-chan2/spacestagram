@@ -1,3 +1,11 @@
 .App {
   text-align: center;
 }
+
+h1 {
+  color: var(--purple);
+}
+
+h2 {
+  color: var(--aqua);
+}
