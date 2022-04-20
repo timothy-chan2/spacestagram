@@ -6,16 +6,16 @@ import './App.css';
 import Post from './Post';
 
 const App = () => {
-  const [postData, setPostData] = useState('');
+  const [posts, setPosts] = useState([]);
   const [apiError, setApiError] = useState('');
 
   useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?start_date=2022-04-18&api_key=${process.env.REACT_APP_API_KEY}`)
-      .then(response => setPostData(response.data))
+      .then(response => setPosts(response.data.reverse()))
       .catch(error => setApiError(error.response));
   }, []);
   
-  const images = postData.map(post => {
+  const images = posts.map(post => {
     return (
       <Post
         key={post.date}
