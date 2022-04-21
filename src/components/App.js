@@ -1,10 +1,13 @@
+import { useState } from 'react';
+
 import Post from './Post';
 import Loading from './Loading';
 import StartDatePicker from './StartDatePicker';
 import useAppData from '../hooks/useAppData';
 
 const App = () => {
-  const { posts, apiError } = useAppData();
+  const [date, setDate] = useState(new Date());
+  const { posts, apiError } = useAppData(date);
   
   const images = posts.map(post => {
     return (
@@ -27,7 +30,12 @@ const App = () => {
       <main>
         {posts.length === 0 && Object.keys(apiError).length === 0 && <Loading />}
         {Object.keys(apiError).length > 0 && <p>{apiError.status}: {apiError.data}</p>}
-        {posts.length > 0 && <StartDatePicker />}
+        {posts.length > 0 &&
+          <StartDatePicker
+            date={date}
+            setDate={setDate}
+          />
+        }
         {images}
       </main>
     </div>
