@@ -1,0 +1,13 @@
+.calendar {
+  color: var(--darker);
+  margin: auto auto 1em auto;
+  width: 15em;
+}
+
+.sdp--dates-grid {
+  grid-template-columns: repeat(7, 1.95em);
+}
+
+.sdp--square-btn {
+  padding: 0;
+}

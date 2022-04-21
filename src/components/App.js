@@ -1,7 +1,6 @@
-import './App.css';
-
 import Post from './Post';
 import Loading from './Loading';
+import StartDatePicker from './StartDatePicker';
 import useAppData from '../hooks/useAppData';
 
 const App = () => {
@@ -28,6 +27,7 @@ const App = () => {
       <main>
         {posts.length === 0 && Object.keys(apiError).length === 0 && <Loading />}
         {Object.keys(apiError).length > 0 && <p>{apiError.status}: {apiError.data}</p>}
+        {posts.length > 0 && <StartDatePicker />}
         {images}
       </main>
     </div>
