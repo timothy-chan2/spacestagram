@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 const Post = (props) => {
-  const [buttonText, setButtonText] = useState('Like');
+  const likeStatus = localStorage.getItem(`like-status-${props.id}`);
+  const [buttonText, setButtonText] = useState(likeStatus || 'Like');
 
   const defaultDate = new Date(props.id);
   const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
@@ -10,6 +11,12 @@ const Post = (props) => {
 
   const clicked = () => {
     buttonText === 'Like' ? setButtonText('Unlike') : setButtonText('Like');
+
+    if (likeStatus === null || likeStatus === 'Like') {
+      localStorage.setItem(`like-status-${props.id}`, 'Unlike');
+    } else if (likeStatus === 'Unlike') {
+      localStorage.setItem(`like-status-${props.id}`, 'Like');
+    }
   }
   
   return (
