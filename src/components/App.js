@@ -40,6 +40,6 @@ const App = () => {
       </main>
     </div>
   );
-}
+};
 
 export default App;

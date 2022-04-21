@@ -38,6 +38,6 @@ const StartDatePicker = (props) => {
       ) : null}
     </section>
   );
-}
+};
 
 export default StartDatePicker;

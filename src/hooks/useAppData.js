@@ -16,6 +16,6 @@ const useAppData = (fullStartDate) => {
   }, [startDate]);
 
   return { posts, apiError };
-}
+};
 
 export default useAppData;

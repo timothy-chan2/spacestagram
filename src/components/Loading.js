@@ -9,6 +9,6 @@ const Loading = () => {
       <h3>Loading...</h3>
     </article>
   );
-}
+};
 
 export default Loading;

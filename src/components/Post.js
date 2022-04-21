@@ -17,7 +17,7 @@ const Post = (props) => {
       likeStatus = 'Like';
       localStorage.setItem(`like-status-${props.id}`, 'Like');
     }
-  }
+  };
   
   return (
     <article className='post'>
@@ -38,6 +38,6 @@ const Post = (props) => {
       </button>
     </article>
   );
-}
+};
 
 export default Post;

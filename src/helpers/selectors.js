@@ -4,6 +4,6 @@ const getLongDate = (defaultDate) => {
   const longDate = `${month} ${defaultDate.getDate() + 1}, ${defaultDate.getFullYear()}`;
 
   return longDate;
-}
+};
 
 export { getLongDate };
