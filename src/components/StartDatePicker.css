@@ -14,7 +14,7 @@
   font-weight: bold;
 }
 
-.calendar {
+#calendar {
   color: var(--darker);
   margin: auto auto 1em auto;
   width: 15em;

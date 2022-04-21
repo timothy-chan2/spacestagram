@@ -22,16 +22,18 @@ const StartDatePicker = (props) => {
       <button
         onClick={togglePicker}
         className='start-date-picker-btn'
+        type='button'
+        aria-controls='calendar'
       >
         Pick Start Date
       </button>
-      <p className='start-date-selected'>{longStartDate}</p>
+      <p className='start-date-selected'>Pictures from {longStartDate} onward</p>
       {visible ? (
         <DatePicker
           selected={props.date}
           onChange={handleDateSelect}
           maxDate={new Date()}
-          className='calendar'
+          id='calendar'
         />
       ) : null}
     </section>

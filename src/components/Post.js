@@ -23,13 +23,16 @@ const Post = (props) => {
     <article className='post'>
       <img src={props.imgUrl} aria-labelledby={props.id} className='post-img' /> 
       <h3 className='post-title'>
-        {props.title} - {longDate}{likeStatus === 'Unlike' && ' ❤️'}
+        {props.title} - {longDate}
+        {likeStatus === 'Unlike' && <span id={`${props.id}-like`}> ❤️</span>}
       </h3>
       <p id={props.id} className='post-desc'>{props.description}</p>
       <button
         data-message='Like or unlike the picture'
         onClick={() => clicked()}
         className='post-like-btn'
+        type='button'
+        aria-controls={`${props.id}-like`}
       >
         {buttonText}
       </button>
