@@ -1,3 +1,14 @@
+.start-date-picker-btn {
+  color: var(--green);
+  background-color: var(--dark);
+  border: 2px solid var(--green);
+}
+
+.start-date-picker-btn:hover, .start-date-picker-btn:focus {
+  color: var(--dark);
+  background-color: var(--green);
+}
+
 .start-date-selected {
   font-size: 1.3em;
   font-weight: bold;

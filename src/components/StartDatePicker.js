@@ -19,7 +19,12 @@ const StartDatePicker = (props) => {
   
   return (
     <section>
-      <button onClick={togglePicker}>Pick Start Date</button>
+      <button
+        onClick={togglePicker}
+        className='start-date-picker-btn'
+      >
+        Pick Start Date
+      </button>
       <p className='start-date-selected'>{longStartDate}</p>
       {visible ? (
         <DatePicker
