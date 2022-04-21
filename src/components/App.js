@@ -29,14 +29,14 @@ const App = () => {
       </header>
       <main>
         {posts.length === 0 && Object.keys(apiError).length === 0 && <Loading />}
-        {Object.keys(apiError).length > 0 && <p>{apiError.status}: {apiError.data}</p>}
-        {posts.length > 0 &&
+        {Object.keys(apiError).length > 0 && <h3>Error: {apiError.message}</h3>}
+        {posts.length > 0 && Object.keys(apiError).length === 0 &&
           <StartDatePicker
             date={date}
             setDate={setDate}
           />
         }
-        {images}
+        {Object.keys(apiError).length === 0 && images}
       </main>
     </div>
   );
