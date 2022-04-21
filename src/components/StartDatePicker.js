@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import DatePicker from 'sassy-datepicker';
 
+import { getLongDate } from '../helpers/selectors';
+
 const StartDatePicker = (props) => {
   const [visible, setVisible] = useState(false);
+
+  let tempDate = new Date(props.date);
+  tempDate.setDate(tempDate.getDate() - 1);
+  const longStartDate = getLongDate(tempDate);
 
   const handleDateSelect = (newDate) => {
     props.setDate(newDate);
@@ -14,7 +20,7 @@ const StartDatePicker = (props) => {
   return (
     <section>
       <button onClick={togglePicker}>Pick Start Date</button>
-      <p>{props.date.toDateString()}</p>
+      <p className='start-date-selected'>{longStartDate}</p>
       {visible ? (
         <DatePicker
           selected={props.date}

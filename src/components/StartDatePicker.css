@@ -1,3 +1,8 @@
+.start-date-selected {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 .calendar {
   color: var(--darker);
   margin: auto auto 1em auto;
