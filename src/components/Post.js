@@ -28,7 +28,7 @@ const Post = (props) => {
       </h3>
       <p id={props.id} className='post-desc'>{props.description}</p>
       <button
-        data-message='Like or unlike the picture'
+        aria-label='Like or unlike the picture'
         onClick={() => clickLikeUnlike()}
         className='post-like-btn'
         type='button'
