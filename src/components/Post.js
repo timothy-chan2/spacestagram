@@ -7,7 +7,7 @@ const Post = (props) => {
 
   const longDate = getLongDate(new Date(props.id));
 
-  const clicked = () => {
+  const clickLikeUnlike = () => {
     buttonText === 'Like' ? setButtonText('Unlike') : setButtonText('Like');
 
     if (likeStatus === null || likeStatus === 'Like') {
@@ -29,7 +29,7 @@ const Post = (props) => {
       <p id={props.id} className='post-desc'>{props.description}</p>
       <button
         data-message='Like or unlike the picture'
-        onClick={() => clicked()}
+        onClick={() => clickLikeUnlike()}
         className='post-like-btn'
         type='button'
         aria-controls={`${props.id}-like`}

@@ -18,7 +18,7 @@ const StartDatePicker = (props) => {
   const togglePicker = () => setVisible(prev => !prev);
   
   return (
-    <section>
+    <form>
       <button
         onClick={togglePicker}
         className='start-date-picker-btn'
@@ -36,7 +36,7 @@ const StartDatePicker = (props) => {
           id='calendar'
         />
       ) : null}
-    </section>
+    </form>
   );
 };
 

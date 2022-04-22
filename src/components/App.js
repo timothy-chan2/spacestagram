@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Post from './Post';
 import Loading from './Loading';
 import StartDatePicker from './StartDatePicker';
+
 import useAppData from '../hooks/useAppData';
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
   });
 
   return (
-    <div className="App">
+    <div className='App'>
       <header>
         <h1>Spacestagram</h1>
         <h2>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</h2>
