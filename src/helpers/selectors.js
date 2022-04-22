@@ -18,4 +18,4 @@ const getShortDate = (dateObject) => {
   ].join('-');
 };
 
-export { getLongDate, getShortDate  };
+export { getLongDate, getShortDate };
