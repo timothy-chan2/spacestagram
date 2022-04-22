@@ -6,6 +6,9 @@ import StartDatePicker from './StartDatePicker';
 
 import useAppData from '../hooks/useAppData';
 
+// The App component shows the start date picker and all the images
+// from the start date until today. If data cannot be fetched,
+// it will display a relevant error message
 const App = () => {
   const [date, setDate] = useState(new Date());
   const { posts, apiError } = useAppData(date);

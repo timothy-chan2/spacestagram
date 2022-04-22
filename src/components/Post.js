@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { getLongDate } from '../helpers/selectors';
 
+// The Post component shows an image and the title, date,
+// description, and like button related to it
 const Post = (props) => {
   let likeStatus = localStorage.getItem(`like-status-${props.id}`);
   const [buttonText, setButtonText] = useState(likeStatus || 'Like');

@@ -3,6 +3,7 @@ import DatePicker from 'sassy-datepicker';
 
 import { getLongDate } from '../helpers/selectors';
 
+// The StartDatePicker component shows the button to open the calendar
 const StartDatePicker = (props) => {
   const [visible, setVisible] = useState(false);
 
