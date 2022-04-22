@@ -6,4 +6,16 @@ const getLongDate = (defaultDate) => {
   return longDate;
 };
 
-export { getLongDate };
+const getShortDate = (dateObject) => {
+  const padTo2Digits = (num) => {
+    return num.toString().padStart(2, '0');
+  };
+
+  return [
+    dateObject.getFullYear(),
+    padTo2Digits(dateObject.getMonth() + 1),
+    padTo2Digits(dateObject.getDate()),
+  ].join('-');
+};
+
+export { getLongDate, getShortDate  };
