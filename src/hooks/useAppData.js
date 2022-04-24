@@ -10,8 +10,8 @@ const useAppData = (fullStartDate) => {
   const startDate = getShortDate(fullStartDate);
 
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?start_date=${startDate}&api_key=${process.env.GOV_DATA_API_KEY}`)
-      .then(response => setPosts(response.data.reverse()))
+    axios.get(`/api/${startDate}`)
+      .then(response => setPosts(response.data))
       .catch(error => setApiError(error));
   }, [startDate]);
 
