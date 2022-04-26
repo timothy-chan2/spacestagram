@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { getLongDate } from '../helpers/selectors';
+import { getLongDate, getCurrentTime } from '../helpers/selectors';
 
 // The Post component shows an image and the title, date,
 // description, and like or unlike button related to it
@@ -7,7 +7,7 @@ const Post = (props) => {
   let likeStatus = localStorage.getItem(`like-status-${props.id}`);
   const [buttonText, setButtonText] = useState(likeStatus || 'Like');
 
-  const longDate = getLongDate(new Date(props.id));
+  const longDate = getLongDate(new Date(`${props.id} ${getCurrentTime()}`));
 
   const clickLikeUnlike = () => {
     buttonText === 'Like' ? setButtonText('Unlike') : setButtonText('Like');

@@ -7,9 +7,7 @@ import { getLongDate } from '../helpers/selectors';
 const StartDatePicker = (props) => {
   const [visible, setVisible] = useState(false);
 
-  let tempDate = new Date(props.date);
-  tempDate.setDate(tempDate.getDate() - 1);
-  const longStartDate = getLongDate(tempDate);
+  const longStartDate = getLongDate(new Date(props.date));
 
   const handleDateSelect = (newDate) => {
     props.setDate(newDate);
