@@ -8,6 +8,7 @@ const StartDatePicker = (props) => {
   const [visible, setVisible] = useState(false);
 
   const longStartDate = getLongDate(new Date(props.date));
+  const currentLongDate = getLongDate(new Date());
 
   const handleDateSelect = (newDate) => {
     props.setDate(newDate);
@@ -26,7 +27,12 @@ const StartDatePicker = (props) => {
       >
         Pick Start Date
       </button>
-      <p className='start-date-selected'>Pictures from {longStartDate} onward</p>
+      {longStartDate === currentLongDate &&
+        <p className='start-date-selected'>Picture from {longStartDate}</p>
+      }
+      {longStartDate !== currentLongDate &&
+        <p className='start-date-selected'>Pictures from {longStartDate} onward</p>
+      }
       {visible ? (
         <DatePicker
           selected={props.date}
