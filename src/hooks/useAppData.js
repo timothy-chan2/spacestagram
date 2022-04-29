@@ -3,8 +3,7 @@ import axios from 'axios';
 
 import { getShortDate } from '../helpers/selectors';
 
-const useAppData = (fullStartDate) => {
-  const [posts, setPosts] = useState([]);
+const useAppData = (fullStartDate, setPosts) => {
   const [apiError, setApiError] = useState({});
   
   const startDate = getShortDate(fullStartDate);
@@ -13,9 +12,9 @@ const useAppData = (fullStartDate) => {
     axios.get(`/api/${startDate}`)
       .then(response => setPosts(response.data))
       .catch(error => setApiError(error));
-  }, [startDate]);
+  }, [startDate, setPosts]);
 
-  return { posts, apiError };
+  return apiError;
 };
 
 export default useAppData;

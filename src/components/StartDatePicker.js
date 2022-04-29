@@ -13,6 +13,7 @@ const StartDatePicker = (props) => {
   const handleDateSelect = (newDate) => {
     props.setDate(newDate);
     setVisible(false);
+    props.setPosts([]);
   };
 
   const togglePicker = () => setVisible(prev => !prev);

@@ -11,7 +11,8 @@ import useAppData from '../hooks/useAppData';
 // it will display a relevant error message
 const App = () => {
   const [date, setDate] = useState(new Date());
-  const { posts, apiError } = useAppData(date);
+  const [posts, setPosts] = useState([]);
+  const apiError = useAppData(date, setPosts);
   
   const images = posts.map(post => {
     return (
@@ -38,6 +39,7 @@ const App = () => {
           <StartDatePicker
             date={date}
             setDate={setDate}
+            setPosts={setPosts}
           />
         }
         {Object.keys(apiError).length === 0 && images}
