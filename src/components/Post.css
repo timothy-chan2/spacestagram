@@ -11,6 +11,11 @@
   border-radius: 8px 8px 0 0;
 }
 
+.post-vid {
+  border: 0;
+  height: 50vw;
+}
+
 .post-title {
   color: var(--yellow);
   margin: 1em 0.35em;
@@ -31,6 +36,10 @@
   .post-img {
     width: 70vw;
     border-radius: 12px 12px 0 0;
+  }
+
+  .post-vid {
+    height: 40vw;
   }
 
   .post-desc {

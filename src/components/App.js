@@ -19,9 +19,10 @@ const App = () => {
       <Post
         key={post.date}
         id={post.date}
-        imgUrl={post.url}
+        url={post.url}
         title={post.title}
         description={post.explanation}
+        media={post.media_type}
       />
     );
   });

@@ -23,7 +23,17 @@ const Post = (props) => {
   
   return (
     <article className='post'>
-      <img src={props.imgUrl} aria-labelledby={props.id} className='post-img' /> 
+      {props.media === 'image' &&
+        <img src={props.url} aria-labelledby={props.id} className='post-img' />
+      }
+      {props.media === 'video' &&
+        <iframe
+          src={props.url}
+          aria-labelledby={props.id}
+          className='post-img post-vid'
+          title={props.title}
+        />
+      }
       <h3 className='post-title'>
         {props.title} - {longDate}
         {likeStatus === 'Unlike' && <span id={`${props.id}-like`}> ❤️</span>}
