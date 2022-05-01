@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Post from './Post';
 import Loading from './Loading';
 import StartDatePicker from './StartDatePicker';
+import ScrollTopBtn from './ScrollTopBtn';
 
 import useAppData from '../hooks/useAppData';
 
@@ -44,6 +45,7 @@ const App = () => {
           />
         }
         {Object.keys(apiError).length === 0 && images}
+        <ScrollTopBtn />
       </main>
       <footer>
         <p>Made with ❤️ by Timothy Chan</p>
