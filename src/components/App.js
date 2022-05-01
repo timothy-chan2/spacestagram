@@ -45,6 +45,9 @@ const App = () => {
         }
         {Object.keys(apiError).length === 0 && images}
       </main>
+      <footer>
+        <p>Made with ❤️ by Timothy Chan</p>
+      </footer>
     </div>
   );
 };
