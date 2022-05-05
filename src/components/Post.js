@@ -32,7 +32,10 @@ const Post = (props) => {
           aria-labelledby={props.id}
           className='post-img post-vid'
           title={props.title}
-        />
+          loading='lazy'
+        >
+          <p>Your browser does not support iframes.</p>
+        </iframe>
       }
       <h3 className='post-title'>
         {props.title} - {longDate}
