@@ -16,6 +16,10 @@
   height: 50vw;
 }
 
+.post-vid:hover {
+  outline: 2px solid var(--red);
+}
+
 .post-title {
   color: var(--yellow);
   margin: 1em 0.35em;
