@@ -48,7 +48,7 @@ const App = () => {
         <ScrollTopBtn />
       </main>
       <footer>
-        <p>Made with ❤️ by Timothy Chan</p>
+        <p>Made with ❤️ by Timothy Chan in Quebec, Canada</p>
       </footer>
     </div>
   );
