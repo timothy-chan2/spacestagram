@@ -10,6 +10,11 @@ test('getLongDate returns the correct long date', () => {
   expect(result).toBe('May 12, 2022');
 });
 
+test('getShortDate returns a string', () => {
+  const result = getLongDate(new Date('Mon May 2, 2022 9:00:00'));
+  expect(typeof result).toBe('string');
+});
+
 test('getShortDate returns the date with 2 digits', () => {
   const result = getShortDate(new Date('Mon May 2, 2022 13:00:00'));
   const day = result.slice(8, 10);
