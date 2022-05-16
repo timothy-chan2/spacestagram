@@ -11,7 +11,7 @@ test('getLongDate returns the correct long date', () => {
 });
 
 test('getShortDate returns a string', () => {
-  const result = getLongDate(new Date('Mon May 2, 2022 9:00:00'));
+  const result = getShortDate(new Date('Mon May 2, 2022 9:00:00'));
   expect(typeof result).toBe('string');
 });
 
