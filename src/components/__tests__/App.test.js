@@ -3,6 +3,6 @@ import App from '../App';
 
 afterEach(cleanup);
 
-it("renders without crashing", () => {
+it('renders without crashing', () => {
   render(<App />);
 });
