@@ -10,6 +10,6 @@ it('renders without crashing', () => {
 });
 
 it('renders "Pictures from May 15, 2022 onward" when May 15 is picked as the start date' , () => {
-  render(<StartDatePicker date={new Date(`2022-05-15 ${getCurrentTime()}`)} />);
+  render(<StartDatePicker date={new Date(`Sun May 15 2022 ${getCurrentTime()}`)} />);
   expect(screen.getByText('Pictures from May 15, 2022 onward')).toBeInTheDocument();
 });
