@@ -7,9 +7,10 @@ it('renders without crashing', () => {
   render(<Post />);
 });
 
-it('renders the default like button', () => {
+it('renders the default like button and the ❤️ is not visible', () => {
   render(<Post />);
   expect(screen.getByText('Like')).toBeInTheDocument();
+  expect(screen.queryByText('❤️')).not.toBeInTheDocument();
 });
 
 it('renders the unlike button and ❤️ after the like button is clicked', () => {
