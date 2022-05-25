@@ -12,20 +12,22 @@ it('renders the default like button', () => {
   expect(screen.getByText('Like')).toBeInTheDocument();
 });
 
-it('renders the unlike button after the like button is clicked', () => {
+it('renders the unlike button and ❤️ after the like button is clicked', () => {
   render(<Post />);
 
   const button = screen.getByText('Like');
   fireEvent.click(button);
 
   expect(screen.getByText('Unlike')).toBeInTheDocument();
+  expect(screen.getByText('❤️')).toBeInTheDocument();
 });
 
-it('renders the like button after the unlike button is clicked', () => {
+it('renders the like button and removes the ❤️ after the unlike button is clicked', () => {
   render(<Post />);
 
   const button = screen.getByText('Unlike');
   fireEvent.click(button);
 
   expect(screen.getByText('Like')).toBeInTheDocument();
+  expect(screen.queryByText('❤️')).not.toBeInTheDocument();
 });
