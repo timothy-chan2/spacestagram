@@ -33,14 +33,16 @@ it('renders the like button and removes the ❤️ after the unlike button is cl
   expect(screen.queryByText('❤️')).not.toBeInTheDocument();
 });
 
-it('renders the image when the media type is image', () => {
+it('only renders the image when the media type is image', () => {
   render(<Post media='image'/>);
 
   expect(screen.getByTestId('image')).toBeTruthy();
+  expect(screen.queryByTestId('video')).toBeNull();
 });
 
-it('renders the video when the media type is video', () => {
+it('only renders the video when the media type is video', () => {
   render(<Post media='video'/>);
 
   expect(screen.getByTestId('video')).toBeTruthy();
+  expect(screen.queryByTestId('image')).toBeNull();
 });
