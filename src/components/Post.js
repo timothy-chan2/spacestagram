@@ -24,7 +24,12 @@ const Post = (props) => {
   return (
     <article className='post'>
       {props.media === 'image' &&
-        <img src={props.url} aria-labelledby={props.id} className='post-img' />
+        <img
+          src={props.url}
+          aria-labelledby={props.id}
+          className='post-img'
+          data-testid='image'
+        />
       }
       {props.media === 'video' &&
         <iframe

@@ -32,3 +32,9 @@ it('renders the like button and removes the ❤️ after the unlike button is cl
   expect(screen.getByText('Like')).toBeInTheDocument();
   expect(screen.queryByText('❤️')).not.toBeInTheDocument();
 });
+
+it('renders the image when the media type is image', () => {
+  render(<Post media='image'/>);
+
+  expect(screen.getByTestId('image')).toBeTruthy();
+});
