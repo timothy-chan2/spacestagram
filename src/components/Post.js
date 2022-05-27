@@ -38,6 +38,7 @@ const Post = (props) => {
           className='post-img post-vid'
           title={props.title}
           loading='lazy'
+          data-testid='video'
         >
           <p>Your browser does not support iframes.</p>
         </iframe>

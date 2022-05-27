@@ -38,3 +38,9 @@ it('renders the image when the media type is image', () => {
 
   expect(screen.getByTestId('image')).toBeTruthy();
 });
+
+it('renders the video when the media type is video', () => {
+  render(<Post media='video'/>);
+
+  expect(screen.getByTestId('video')).toBeTruthy();
+});
