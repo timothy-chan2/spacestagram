@@ -13,3 +13,9 @@ it('renders "Pictures from May 15, 2022 onward" when May 15 is picked as the sta
   render(<StartDatePicker date={new Date(`Sun May 15 2022 ${getCurrentTime()}`)} />);
   expect(screen.getByText('Pictures from May 15, 2022 onward')).toBeInTheDocument();
 });
+
+it('does not render the date picker calendar when the page first loads', () => {
+  render(<StartDatePicker />);
+
+  expect(screen.queryByTestId('calendar')).toBeNull();
+});
