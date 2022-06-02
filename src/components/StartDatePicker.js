@@ -40,6 +40,7 @@ const StartDatePicker = (props) => {
           onChange={handleDateSelect}
           maxDate={new Date()}
           id='calendar'
+          data-testid='calendar'
         />
       ) : null}
     </form>
