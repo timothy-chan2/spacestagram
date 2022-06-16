@@ -28,3 +28,13 @@ it('renders the date picker calendar after Pick Start Date button is pressed', (
 
   expect(screen.getByTestId('calendar')).toBeTruthy();
 });
+
+it('does not render the date picker calendar after Pick Start Date button is pressed twice', () => {
+  render(<StartDatePicker />);
+
+  const button = screen.getByText('Pick Start Date');
+  fireEvent.click(button);
+  fireEvent.click(button);
+
+  expect(screen.queryByTestId('calendar')).toBeNull();
+});
