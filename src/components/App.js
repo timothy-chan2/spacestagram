@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 import Post from './Post';
 import Loading from './Loading';
@@ -32,6 +33,9 @@ const App = () => {
     <div className='App'>
       <header>
         <h1>Spacestagram</h1>
+        <nav>
+          <Link to="/developer">Developer</Link>
+        </nav>
         <h2>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</h2>
       </header>
       <main>
