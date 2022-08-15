@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Link } from "react-router-dom";
 
 import Post from './Post';
+import Navbar from './Navbar';
 import Loading from './Loading';
 import StartDatePicker from './StartDatePicker';
 import ScrollTopBtn from './ScrollTopBtn';
@@ -32,10 +32,7 @@ const App = () => {
   return (
     <div className='App'>
       <header>
-        <h1>Spacestagram</h1>
-        <nav>
-          <Link to="/developer">Developer</Link>
-        </nav>
+        <Navbar />
         <h2>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</h2>
       </header>
       <main>
