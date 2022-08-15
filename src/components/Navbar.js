@@ -4,6 +4,7 @@ const Navbar = () => {
   return(
     <nav>
       <h1>Spacestagram</h1>
+      <Link to="/">Home</Link> •{" "}
       <Link to="/developer">Developer</Link>
     </nav>
   );
