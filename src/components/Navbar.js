@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
+// The Navbar component shows the app name and page navigation links
 const Navbar = () => {
   const navLinkColor = ({ isActive }) => {
     return {
