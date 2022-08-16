@@ -2,10 +2,15 @@ import Navbar from '../Navbar';
 
 const Developer = () => {
   return (
-    <main>
-      <Navbar />
-      <h2>Developer</h2>
-    </main>
+    <div className='App'>
+      <header>
+        <Navbar />
+        <h2>Timothy Chan</h2>
+      </header>
+      <main>
+        
+      </main>
+    </div>
   );
 };
 
