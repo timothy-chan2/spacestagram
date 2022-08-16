@@ -1,11 +1,31 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return(
     <nav>
       <h1>Spacestagram</h1>
-      <Link to="/">Home</Link> •{" "}
-      <Link to="/developer">Developer</Link>
+      <pre className='nav-links'>
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              color: isActive ? "var(--pink)" : "var(--yellow)",
+            };
+          }}
+          to="/"
+        >
+          Home
+        </NavLink>  •{"  "}
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              color: isActive ? "var(--pink)" : "var(--yellow)",
+            };
+          }}
+          to="/developer"
+        >
+          Developer
+        </NavLink>
+      </pre>
     </nav>
   );
 };
