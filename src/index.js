@@ -5,7 +5,7 @@ import {
   Routes,
   Route,
   Navigate
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import './index.css';
 
@@ -19,9 +19,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="developer" element={<Developer />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path='/' element={<App />} />
+        <Route path='developer' element={<Developer />} />
+        <Route path='*' element={<Navigate to='/' />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
