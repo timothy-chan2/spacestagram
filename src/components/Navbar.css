@@ -1,0 +1,9 @@
+h1 {
+  color: var(--purple);
+  font-size: 2em;
+}
+
+.nav-links {
+  color: var(--yellow);
+  font-size: 1.8em;
+}
