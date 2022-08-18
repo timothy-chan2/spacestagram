@@ -5,7 +5,7 @@ const Developer = () => {
     <div className='App'>
       <header>
         <Navbar />
-        <h2>Timothy Chan</h2>
+        <h2 className='developerName'>Timothy Chan</h2>
       </header>
       <main>
         
