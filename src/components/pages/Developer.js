@@ -1,4 +1,5 @@
 import Navbar from '../Navbar';
+import Project from '../Project';
 
 const Developer = () => {
   return (
@@ -14,7 +15,11 @@ const Developer = () => {
         </a>
       </header>
       <main>
-        
+        <p>My other projects:</p>
+        <Project
+          title='Trash Panda MTL'
+          imgUrl='images/trash-panda.gif'
+        />
       </main>
     </div>
   );
