@@ -9,7 +9,7 @@ const Developer = () => {
         <a href='https://linkedin.com/in/timothychan2' target='_blank' rel='noreferrer'>
           <img
             src='images/In-White-34.png'
-            alt='LinkedIn logo'
+            aria-label='LinkedIn logo'
           />
         </a>
       </header>
