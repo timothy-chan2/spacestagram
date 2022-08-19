@@ -19,6 +19,7 @@ const Developer = () => {
         <Project
           title='Trash Panda MTL'
           imgUrl='images/trash-panda.gif'
+          description='A web app that allows Montrealers to extend the life of discarded furniture by displaying their location on an interactive map.'
         />
       </main>
     </div>
