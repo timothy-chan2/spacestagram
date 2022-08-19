@@ -15,7 +15,7 @@ const Developer = () => {
         </a>
       </header>
       <main>
-        <p>My other projects:</p>
+        <p className='otherProjects'>My other projects:</p>
         <Project
           title='Trash Panda MTL'
           imgUrl='images/trash-panda.gif'
