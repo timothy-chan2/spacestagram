@@ -1,11 +1,7 @@
 const Project = (props) => {
   return (
     <article className='post'>
-      <a
-        href='https://github.com/andres039/Upcycle-Cradle-Montreal'
-        target='_blank'
-        rel='noreferrer'
-      >
+      <a href={props.linkUrl} target='_blank' rel='noreferrer'>
         <img
           src={props.imgUrl}
           aria-labelledby={props.title}
