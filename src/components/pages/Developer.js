@@ -3,6 +3,8 @@ import projects from '../../helpers/projectData';
 import Navbar from '../Navbar';
 import Project from '../Project';
 
+// The Developer component shows some of the projects I have done
+// with links to my GitHub page if it is not deloyed
 const Developer = () => {
   const projectCards = projects.map(project => {
     return (
