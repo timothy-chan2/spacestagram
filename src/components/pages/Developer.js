@@ -1,7 +1,21 @@
+import projects from '../../helpers/projectData';
+
 import Navbar from '../Navbar';
 import Project from '../Project';
 
 const Developer = () => {
+  const projectCards = projects.map(project => {
+    return (
+      <Project
+        key={project.title}
+        title={project.title}
+        imgUrl={project.imgUrl}
+        linkUrl={project.linkUrl}
+        description={project.desc}
+      />
+    );
+  });
+  
   return (
     <div className='App'>
       <header>
@@ -16,12 +30,7 @@ const Developer = () => {
       </header>
       <main>
         <p className='otherProjects'>My other projects:</p>
-        <Project
-          title='Trash Panda MTL'
-          imgUrl='images/trash-panda.gif'
-          linkUrl='https://github.com/andres039/Upcycle-Cradle-Montreal'
-          description='A web app that allows Montrealers to extend the life of discarded furniture by displaying their location on an interactive map.'
-        />
+        {projectCards}
       </main>
     </div>
   );
