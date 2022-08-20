@@ -4,7 +4,7 @@ const Project = (props) => {
       <a href={props.linkUrl} target='_blank' rel='noreferrer'>
         <img
           src={props.imgUrl}
-          aria-labelledby={props.title}
+          aria-label={props.title}
           className='post-img'
         />
       </a>
