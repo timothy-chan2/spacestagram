@@ -1,3 +1,5 @@
+// The Project component shows an image, title, and
+// description of a project I previously worked on
 const Project = (props) => {
   return (
     <article className='post'>
