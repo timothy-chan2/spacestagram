@@ -1,8 +1,31 @@
-.developerName {
+.developer {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  text-align: center;
+  padding: 0;
+}
+
+.bg-image {
+  opacity: 0.3;
+  height: 100vh;
+  width: 1500px;
+}
+
+.developer-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y:auto;
+}
+
+.developer-name {
   font-size: 1.75em;
 }
 
-.otherProjects {
+.other-projects {
   color: var(--light-blue);
   font-size: 1.5em;
 }

@@ -19,21 +19,29 @@ const Developer = () => {
   });
   
   return (
-    <div className='App'>
-      <header>
-        <Navbar />
-        <h2 className='developerName'>Timothy Chan</h2>
-        <a href='https://linkedin.com/in/timothychan2' target='_blank' rel='noreferrer'>
-          <img
-            src='images/In-White-34.png'
-            aria-label='LinkedIn logo'
-          />
-        </a>
-      </header>
-      <main>
-        <p className='otherProjects'>My other projects:</p>
-        {projectCards}
-      </main>
+    <div className='developer'>
+      <img
+          className='bg-image'
+          src='images/trunk-ring.jpg'
+          alt=''
+        />
+      
+      <div className='developer-content'>
+        <header>
+          <Navbar />
+          <h2 className='developer-name'>Timothy Chan</h2>
+          <a href='https://linkedin.com/in/timothychan2' target='_blank' rel='noreferrer'>
+            <img
+              src='images/In-White-34.png'
+              aria-label='LinkedIn logo'
+            />
+          </a>
+        </header>
+        <main>
+          <p className='other-projects'>My other projects:</p>
+          {projectCards}
+        </main>
+      </div>
     </div>
   );
 };
