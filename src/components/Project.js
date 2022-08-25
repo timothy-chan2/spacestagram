@@ -8,6 +8,7 @@ const Project = (props) => {
           src={props.imgUrl}
           aria-label={props.title}
           className='post-img'
+          loading='lazy'
         />
       </a>
       <h3 className='post-title'>{props.title}</h3>
