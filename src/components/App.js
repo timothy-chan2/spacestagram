@@ -30,7 +30,7 @@ const App = () => {
   });
 
   return (
-    <div className='App'>
+    <div className='app'>
       <header>
         <Navbar />
         <h2>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</h2>
