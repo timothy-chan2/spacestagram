@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import DatePicker from 'sassy-datepicker';
 
 import { getLongDate } from '../helpers/selectors';
@@ -7,7 +7,11 @@ import { getLongDate } from '../helpers/selectors';
 const StartDatePicker = (props) => {
   const [visible, setVisible] = useState(false);
 
-  const longStartDate = getLongDate(new Date(props.date));
+  const longStartDate = useMemo(
+    () => getLongDate(new Date(props.date)),
+    [props.date]
+  );
+  
   const currentLongDate = getLongDate(new Date());
 
   const handleDateSelect = (newDate) => {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { getLongDate, getCurrentTime } from '../helpers/selectors';
 
 // The Post component shows an image and the title, date,
@@ -7,7 +7,10 @@ const Post = (props) => {
   let likeStatus = localStorage.getItem(`like-status-${props.id}`);
   const [buttonText, setButtonText] = useState(likeStatus || 'Like');
 
-  const longDate = getLongDate(new Date(`${props.id} ${getCurrentTime()}`));
+  const longDate = useMemo(
+    () => getLongDate(new Date(`${props.id} ${getCurrentTime()}`)),
+    [props.id]
+  );
 
   const clickLikeUnlike = () => {
     buttonText === 'Like' ? setButtonText('Unlike') : setButtonText('Like');
