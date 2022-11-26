@@ -9,7 +9,7 @@ const useAppData = (fullStartDate, setPosts) => {
   const startDate = getShortDate(fullStartDate);
 
   useEffect(() => {
-    axios.get(`/api/start-dates/${startDate}`)
+    axios.get(`${process.env.API_URL}/api/start-dates/${startDate}`)
       .then(response => setPosts(response.data))
       .catch(error => setApiError(error));
   }, [startDate, setPosts]);
