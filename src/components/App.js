@@ -15,6 +15,8 @@ const App = () => {
   const [date, setDate] = useState(new Date());
   const [posts, setPosts] = useState([]);
   const apiError = useAppData(date, setPosts);
+
+  console.log('The following are the posts:', posts);
   
   const images = posts.map(post => {
     return (
