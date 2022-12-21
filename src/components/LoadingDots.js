@@ -3,9 +3,9 @@
 const LoadingDots = () => {
   return (
     <article className='loader'>
-      <span className='dot1' />
-      <span className='dot2' />
-      <span className='dot3' />
+      <span className='loader-dot' />
+      <span className='loader-dot' />
+      <span className='loader-dot' />
     </article>
   );
 };
