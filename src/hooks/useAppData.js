@@ -11,7 +11,10 @@ const useAppData = (fullStartDate, setPosts) => {
   useEffect(() => {
     axios.get(`/api/${startDate}`)
       .then(response => setPosts(response.data))
-      .catch(error => setApiError(error));
+      .catch(error => {
+        setApiError(error);
+        console.log(error);
+      });
   }, [startDate, setPosts]);
 
   return apiError;
