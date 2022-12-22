@@ -12,8 +12,9 @@ const useAppData = (fullStartDate, setPosts) => {
     axios.get(`/api/${startDate}`)
       .then(response => setPosts(response.data))
       .catch(error => {
-        setApiError(error);
-        console.log(error);
+        if (error) {
+          setApiError(error);
+        }
       });
   }, [startDate, setPosts]);
 
