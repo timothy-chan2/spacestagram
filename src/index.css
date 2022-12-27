@@ -7,6 +7,7 @@
 @import './components/ScrollTopBtn.css';
 @import './components/pages/Developer.css';
 @import './components/Project.css';
+@import './components/FloatingAstronaut.css';
 
 body {
   margin: 0;
