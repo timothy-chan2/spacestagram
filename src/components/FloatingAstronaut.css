@@ -5,11 +5,11 @@
 
 .window {
   position: relative;
-  height: 500px;
-  width: 500px;
+  height: 17em;
+  width: 17em;
   border-radius: 50%;
   background-color: rgb(0, 68, 102);
-  transform: scale(0.7);
+  transform: scale(0.8);
 }
 
 @keyframes floating{
@@ -23,13 +23,54 @@
   animation-duration: 5s;
   animation-iteration-count: infinite;
   position: relative;
-  bottom: 80px;
+  bottom: 100px;
   left: 20px;
 }
 
 .person {
   position: relative;
-  left:131px;
-  bottom: 250px;
-  transform: rotate(-30deg);
+  left:25px;
+  bottom: 70px;
+  transform: rotate(-20deg);
+}
+
+.tank {
+  background-color: #a6a6a6;
+  height:180px;
+  width:100px;
+  border-radius: 45px 45px 15px 15px;
+  position: relative;
+  left:60px;
+  top:120px;
+  transform: rotate(-20deg);
+}
+
+.helmet {
+  background-color: white;
+  height: 80px;
+  width: 85px;
+  border-radius: 46%;
+  position: relative;
+  left:25px;
+  z-index: 5;
+}
+
+.glass {
+  background-color: #666666;
+  height:70px;
+  width:80px;
+  border-radius: 60% 60% 55% 55%;
+  position: relative;
+  left:2.5px;
+  top:6px;
+}
+
+.reflection {
+  background-color: rgba(166, 166, 166,0.7);
+  height:15px;
+  width:15px;
+  border-radius: 50%;
+  position: relative;
+  left:15px;
+  top:15px;
 }
