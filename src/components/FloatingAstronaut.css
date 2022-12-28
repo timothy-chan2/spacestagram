@@ -14,7 +14,7 @@
 
 @keyframes floating{
   50%{
-    transform: translateY(30px);
+    transform: translate(5px, 20px);
   }
 }
 
@@ -23,54 +23,172 @@
   animation-duration: 5s;
   animation-iteration-count: infinite;
   position: relative;
-  bottom: 100px;
+  bottom: 110px;
   left: 20px;
 }
 
 .person {
   position: relative;
-  left:25px;
+  left: 25px;
   bottom: 70px;
   transform: rotate(-20deg);
 }
 
 .tank {
   background-color: #a6a6a6;
-  height:180px;
-  width:100px;
+  height: 180px;
+  width: 100px;
   border-radius: 45px 45px 15px 15px;
   position: relative;
-  left:60px;
-  top:120px;
+  left: 60px;
+  top: 120px;
   transform: rotate(-20deg);
 }
 
 .helmet {
   background-color: white;
-  height: 80px;
-  width: 85px;
+  height: 70px;
+  width: 75px;
   border-radius: 46%;
   position: relative;
-  left:25px;
+  left: 51px;
   z-index: 5;
 }
 
 .glass {
   background-color: #666666;
-  height:70px;
-  width:80px;
+  height: 60px;
+  width: 70px;
   border-radius: 60% 60% 55% 55%;
   position: relative;
-  left:2.5px;
-  top:6px;
+  left: 2.5px;
+  top: 2px;
 }
 
 .reflection {
   background-color: rgba(166, 166, 166,0.7);
-  height:15px;
-  width:15px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   position: relative;
-  left:15px;
-  top:15px;
+  left: 15px;
+  top: 15px;
+}
+
+.suit {
+  background-color: #f2f2f2;
+  height: 90px;
+  width:  90px;
+  border-radius: 10%;
+  position: relative;
+  bottom: 5px;
+  left: 44px;
+}
+
+.armr {
+  height: 22px;
+  width: 60px;
+  background-color: #f2f2f2;
+  border-radius: 40px;
+  position: relative;
+  bottom: 124px;
+  left: 115px;
+  transform: rotate(-20deg);
+}
+
+.arml {
+  height: 22px;
+  width: 60px;
+  background-color: #f2f2f2;
+  border-radius: 40px;
+  position: relative;
+  bottom: 103px;
+  right: 2px;
+  transform: rotate(20deg);
+}
+
+.forearmr {
+  height: 22px;
+  width: 50px;
+  background-color: #f2f2f2;
+  border-radius: 26px;
+  position: relative;
+  bottom: 19px;
+  left: 25px;
+  transform: rotate(90deg);
+}
+
+.forearml {
+  height: 22px;
+  width: 50px;
+  background-color: #f2f2f2;
+  border-radius: 26px;
+  position: relative;
+  bottom: 19px;
+  right: 14px;
+  transform: rotate(-90deg);
+}
+
+.glover {
+  height: 24px;
+  width: 22px;
+  background-color: white;
+  border-top-left-radius: 50%; 
+  border-top-right-radius: 50%;
+  transform: rotate(-90deg);
+  position: relative;
+  bottom: 1px;
+  right: 14px;
+}
+
+.glovel {
+  height: 24px;
+  width: 22px;
+  background-color: white;
+  border-top-left-radius: 50%; 
+  border-top-right-radius: 50%;
+  transform: rotate(90deg);
+  position: relative;
+  bottom: 1px;
+  left: 42px;
+}
+
+.thumbr {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  right: 6px;
+  top: 15px;
+}
+
+.thumbl {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  left: 19px;
+  top: 15px;
+}
+
+.wrist1{
+  background-color: tomato;
+  width: 24px;
+  height: 5px;
+  border-radius: 13px;
+  position: relative;
+  top: 16px;
+  right: 1px;
+}
+
+.wrist2 {
+  background-color: tomato;
+  width: 24px;
+  height: 5px;
+  border-radius: 13px;
+  position: relative;
+  top: 16px;
+  right: 1px;
 }
