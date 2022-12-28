@@ -173,17 +173,7 @@
   top: 15px;
 }
 
-.wrist1 {
-  background-color: tomato;
-  width: 24px;
-  height: 5px;
-  border-radius: 13px;
-  position: relative;
-  top: 16px;
-  right: 1px;
-}
-
-.wrist2 {
+.wrist1, .wrist2 {
   background-color: tomato;
   width: 24px;
   height: 5px;
