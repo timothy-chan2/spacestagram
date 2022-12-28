@@ -23,13 +23,13 @@
   animation-duration: 5s;
   animation-iteration-count: infinite;
   position: relative;
-  bottom: 115px;
+  bottom: 160px;
   left: 15px;
 }
 
 .person {
   position: relative;
-  left: 53px;
+  left: 52px;
   bottom: 75px;
   transform: rotate(-20deg);
 }
@@ -262,4 +262,42 @@
   position: relative;
   top: 32px;
   right: 1.5px;
+}
+
+.s1, .s2, .s3, .s4, .s5, .s6 {
+  background-color: white;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.s1 {
+  top: 20px;
+  left: 110px;
+}
+
+.s2 {
+  top: 130px;
+  left: 200px;
+}
+
+.s3 {
+  top: 98px;
+  left: 15px;
+}
+
+.s4 {
+  top: 230px;
+  left: 145px;
+}
+
+.s5 {
+  top: 160px;
+  left: 45px;
+}
+
+.s6 {
+  top: 15px;
+  left: 230px;
 }
