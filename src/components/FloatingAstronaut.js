@@ -27,7 +27,7 @@ const FloatingAstronaut = () => {
 							</div>
 						</div>
 						<div className='arml'>
-							<div className='handl'>
+							<div className='forearml'>
 								<div className="glovel">
 									<div className='thumbl' />
 									<div className='wrist2' />
@@ -35,7 +35,7 @@ const FloatingAstronaut = () => {
 							</div>
 						</div>
 						<div className='armr'>
-							<div className='handr'>
+							<div className='forearmr'>
 								<div className='glover'>
 									<div className='thumbr' />
 									<div className='wrist1' />
