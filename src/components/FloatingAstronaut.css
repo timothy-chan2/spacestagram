@@ -173,7 +173,7 @@
   top: 15px;
 }
 
-.wrist1{
+.wrist1 {
   background-color: tomato;
   width: 24px;
   height: 5px;
@@ -191,4 +191,44 @@
   position: relative;
   top: 16px;
   right: 1px;
+}
+
+.panel {
+  background-color: white;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  position: relative;
+  top: 20px;
+  left: 16px;
+}
+
+.btn1 {
+  height: 12px;
+  width: 12px;
+  border-radius: 25%;
+  background-color: #ffd147;
+  position: relative;
+  left: 5px;
+  top: 20px;
+}
+
+.btn2 {
+  height: 12px;
+  width: 12px;
+  border-radius: 25%;
+  background-color: #4775ff;
+  position: relative;
+  left: 21px;
+  top: 8px;
+}
+
+.knob {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #a6a6a6;
+  position: relative;
+  bottom: 14px;
+  left: 38px;
 }
