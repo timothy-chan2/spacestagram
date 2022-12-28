@@ -43,9 +43,11 @@ const FloatingAstronaut = () => {
 							</div>
 						</div>
 						<div className='legl'>
+							<div className='stripel' />
 							<div className='bootl' />
 						</div>
 						<div className='legr'>
+							<div className='striper' />
 							<div className='bootr' />
 						</div>
 					</div>
