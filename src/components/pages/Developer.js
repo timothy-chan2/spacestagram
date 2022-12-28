@@ -3,6 +3,7 @@ import projects from '../../helpers/projectData';
 import Navbar from '../Navbar';
 import Project from '../Project';
 import LoadingDots from '../LoadingDots';
+import FloatingAstronaut from '../FloatingAstronaut';
 
 // The Developer component shows some of the projects I have done
 // with links to my GitHub page if it is not deloyed
@@ -39,6 +40,7 @@ const Developer = () => {
           </a>
         </header>
         <main>
+          <FloatingAstronaut />
           {projectCards.length === 0 && <LoadingDots />}
           {projectCards.length > 0 &&
             <p className='other-projects'>My other projects:</p>
