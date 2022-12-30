@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Loading from './Loading';
 import StartDatePicker from './StartDatePicker';
 import ScrollTopBtn from './ScrollTopBtn';
+import SelectLoadingIcon from './SelectLoadingIcon';
 
 import useAppData from '../hooks/useAppData';
 
@@ -14,6 +15,7 @@ import useAppData from '../hooks/useAppData';
 const App = () => {
   const [date, setDate] = useState(new Date());
   const [posts, setPosts] = useState([]);
+  const [loadingIcon, setLoadingIcon] = useState('wheel');
   const apiError = useAppData(date, setPosts);
   
   const images = posts.map(post => {
@@ -36,8 +38,9 @@ const App = () => {
         <h2>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</h2>
       </header>
       <main>
-        {posts.length === 0 && Object.keys(apiError).length === 0 && <Loading />}
+        {posts.length === 0 && Object.keys(apiError).length === 0 && loadingIcon === 'wheel' && <Loading />}
         {Object.keys(apiError).length > 0 && <h3>Error: {apiError.message}</h3>}
+        {posts.length > 0 && <SelectLoadingIcon setLoadingIcon={setLoadingIcon} />}
         {posts.length > 0 && Object.keys(apiError).length === 0 &&
           <StartDatePicker
             date={date}
