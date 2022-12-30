@@ -6,6 +6,11 @@ const SelectLoadingIcon = (props) => {
 
   const toggleLoadingIconDropdown = () => setVisible(prev => !prev);
 
+  const handleDropdownSelect = (choice) => {
+    setLoadingIcon(choice);
+    setVisible(false);
+  };
+
   return (
     <article className='loading-dropdown'>
       <button
@@ -21,7 +26,7 @@ const SelectLoadingIcon = (props) => {
         <section id='loading-choices'>
           <button
             aria-label='Switch to the dots loading icon'
-            onClick={setLoadingIcon('dots')}
+            onClick={() => handleDropdownSelect('dots')}
             className='loading-option-btn'
             type='button'
           >
@@ -29,7 +34,7 @@ const SelectLoadingIcon = (props) => {
           </button>
           <button
             aria-label='Switch to the wheel loading icon'
-            onClick={setLoadingIcon('wheel')}
+            onClick={() => handleDropdownSelect('wheel')}
             className='loading-option-btn'
             type='button'
           >
