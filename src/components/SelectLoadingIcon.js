@@ -7,7 +7,7 @@ const SelectLoadingIcon = (props) => {
   const toggleLoadingIconDropdown = () => setVisible(prev => !prev);
 
   return (
-    <article>
+    <article className='loading-dropdown'>
       <button
         aria-label='Switch to a different loading icon'
         onClick={toggleLoadingIconDropdown}
@@ -15,7 +15,7 @@ const SelectLoadingIcon = (props) => {
         type='button'
         aria-controls='loading-choices'
       >
-        Loading Icon
+        Pick Loading Icon
       </button>
       {visible ? (
         <section id='loading-choices'>
