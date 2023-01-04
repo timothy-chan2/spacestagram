@@ -29,9 +29,10 @@
 
 .person {
   position: relative;
-  left: 52px;
-  bottom: 75px;
+  left: 56px;
+  bottom: 55px;
   transform: rotate(-20deg);
+  width: 174px;
 }
 
 .tank {
