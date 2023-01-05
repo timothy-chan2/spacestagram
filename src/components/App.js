@@ -46,7 +46,12 @@ const App = () => {
           loadingIcon === 'wheel' && <Loading />
         }
         {Object.keys(apiError).length > 0 && <h3>Error: {apiError.message}</h3>}
-        {posts.length > 0 && <SelectLoadingIcon setLoadingIcon={setLoadingIcon} />}
+        {posts.length > 0 &&
+          <SelectLoadingIcon
+            loadingIcon={loadingIcon}
+            setLoadingIcon={setLoadingIcon}
+          />
+        }
         {posts.length > 0 && Object.keys(apiError).length === 0 &&
           <StartDatePicker
             date={date}

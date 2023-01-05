@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const SelectLoadingIcon = (props) => {
-  const { setLoadingIcon } = props;
+  const { loadingIcon, setLoadingIcon } = props;
   const [visible, setVisible] = useState(false);
 
   const toggleLoadingIconDropdown = () => setVisible(prev => !prev);
@@ -27,7 +27,8 @@ const SelectLoadingIcon = (props) => {
           <button
             aria-label='Switch to the dots loading icon'
             onClick={() => handleDropdownSelect('dots')}
-            className='loading-option-btn'
+            className={loadingIcon === 'dots' ?
+              'loading-option-btn--selected' : 'loading-option-btn'}
             type='button'
           >
             Dots
@@ -35,7 +36,8 @@ const SelectLoadingIcon = (props) => {
           <button
             aria-label='Switch to the wheel loading icon'
             onClick={() => handleDropdownSelect('wheel')}
-            className='loading-option-btn'
+            className={loadingIcon === 'wheel' ?
+              'loading-option-btn--selected' : 'loading-option-btn'}
             type='button'
           >
             Wheel
