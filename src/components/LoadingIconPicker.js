@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const SelectLoadingIcon = (props) => {
+const LoadingIconPicker = (props) => {
   const { loadingIcon, setLoadingIcon } = props;
   const [visible, setVisible] = useState(false);
 
@@ -48,4 +48,4 @@ const SelectLoadingIcon = (props) => {
   );
 };
 
-export default SelectLoadingIcon;
+export default LoadingIconPicker;

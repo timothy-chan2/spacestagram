@@ -2,7 +2,7 @@
 @import 'styles/animations.css';
 @import './components/App.css';
 @import './components/Navbar.css';
-@import './components/SelectLoadingIcon.css';
+@import './components/LoadingIconPicker.css';
 @import './components/StartDatePicker.css';
 @import './components/Post.css';
 @import './components/ScrollTopBtn.css';

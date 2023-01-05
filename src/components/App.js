@@ -4,9 +4,9 @@ import Post from './Post';
 import Navbar from './Navbar';
 import Loading from './Loading';
 import LoadingDots from './LoadingDots';
+import LoadingIconPicker from './LoadingIconPicker';
 import StartDatePicker from './StartDatePicker';
 import ScrollTopBtn from './ScrollTopBtn';
-import SelectLoadingIcon from './SelectLoadingIcon';
 
 import useAppData from '../hooks/useAppData';
 
@@ -47,7 +47,7 @@ const App = () => {
         }
         {Object.keys(apiError).length > 0 && <h3>Error: {apiError.message}</h3>}
         {posts.length > 0 &&
-          <SelectLoadingIcon
+          <LoadingIconPicker
             loadingIcon={loadingIcon}
             setLoadingIcon={setLoadingIcon}
           />
