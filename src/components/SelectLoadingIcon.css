@@ -32,4 +32,5 @@
   color: var(--dark);
   background-color: var(--light-blue);
   border: 2px solid var(--light-blue);
+  margin: 4px;
 }
