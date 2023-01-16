@@ -13,6 +13,17 @@ const Project = (props) => {
           />
         </a>
       }
+      {props.videoUrl &&
+        <iframe
+          src={props.videoUrl}
+          aria-labelledby={props.title}
+          className='post-img post-vid'
+          title={props.title}
+          loading='lazy'
+        >
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+      }
       <h3 className='post-title'>{props.title}</h3>
       <p className='post-desc project-desc'>{props.description}</p>
     </article>
